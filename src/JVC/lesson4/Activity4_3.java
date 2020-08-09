@@ -34,7 +34,7 @@ public class Activity4_3 {
         System.out.print("Divided by "+a+ ": ");
         divided(b);
         int c = MinMultiples(a,b);
-        System.out.print("\nDivided by "+a +" and "+b+ ": ");
+        System.out.print("\nDivided by "+a +" & "+b+ ": ");
         divided(c);
     }
 }
