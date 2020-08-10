@@ -7,7 +7,7 @@ public class Activity4_5 {
         Scanner scanner= new Scanner(System.in);
         System.out.print("Entry N: ");
         int n= scanner.nextInt();
-        int m=1;
+        long m=1;
         for (int i=1; i<=n; i++ ){
             m=m*i;
         }
