@@ -11,8 +11,8 @@ public class Activity4_4 {
         for(int i=1; i<=n; i=i+1){
             sum=sum+i;
         }
-        float j = sum,m=n;
+        float j = (float)sum/n;
         System.out.println("The sum of 1 to "+n+" is "+sum);
-        System.out.println("The average is: "+j/m);
+        System.out.println("The average is: "+j);
     }
 }
