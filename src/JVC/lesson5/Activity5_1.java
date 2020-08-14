@@ -30,7 +30,7 @@ public class Activity5_1 {
 
     public static void main(String[] args) {
         int i = 1;
-        while (i < 500) {
+        while (i < 100000) {
             if (check_Arm(i) == 1) {
                 System.out.print(i + "\t");
             }
