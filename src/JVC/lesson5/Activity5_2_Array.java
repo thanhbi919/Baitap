@@ -13,7 +13,7 @@ public class Activity5_2_Array {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter number of elements: ");
+        System.out.print("Enter size of elements: ");
         int n = scanner.nextInt();
         int[] arr;
         arr = new int[n];

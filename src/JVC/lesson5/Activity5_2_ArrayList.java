@@ -5,7 +5,7 @@ import java.util.*;
 public class Activity5_2_ArrayList {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter number of elements: ");
+        System.out.print("Enter size of elements: ");
         int n = scanner.nextInt();
         List<Integer> arr = new ArrayList<>();
         for (int i = 0; i < n; i++) {
