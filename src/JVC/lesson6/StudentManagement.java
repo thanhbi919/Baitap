@@ -12,14 +12,11 @@ public class StudentManagement {
         System.out.print("Number of students want to enter: ");
         Scanner scanner = new Scanner(System.in);
         int total = scanner.nextInt();
-        this.total = this.total + total;
+        this.total = total;
         scanner.nextLine();
+        students = new Student[total];
 
-        for (int i = 0; i <= this.total; i++) {//tai sao Student[0] lai khoi tao bang null
-            students = new Student[i];
-        }
-
-        for (int i = 0; i < this.total; i++) {
+        for (int i = 0; i < total; i++) {
             System.out.print("Name: ");
             String name = scanner.nextLine();
             System.out.print("Gpa: ");
@@ -43,28 +40,36 @@ public class StudentManagement {
         return total - getPass();
     }
 
-    public Student maxGpa() {//tim sinh vien co GPA cao nhat
-        float max=0;
-        int count=0  ;
+    public ArrayList<Student> maxGpa() {//tim sinh vien co GPA cao nhat
+        float max = 0;
+        ArrayList<Student> maxGPA = new ArrayList<>();// mang max GPA chưa danh sach cac sinh vien đạt max GPA
         for (int i = 0; i < total; i++) {
             if (students[i].getGpa() > max) {
                 max = students[i].getGpa();
-                count=i;
             }
         }
-        return students[count];
+        for (int i = 0; i < total; i++) {
+            if (students[i].getGpa() == max) {
+                maxGPA.add(students[i]);
+            }
+        }
+        return maxGPA;
     }
 
-    public Student minGpa() {//tim sinh vien co GPA nho nhat
+    public ArrayList<Student> minGpa() {//tim sinh vien co GPA thap nhat
         float min = students[0].getGpa();
-        int count = 0;
+        ArrayList<Student> minGPA = new ArrayList<>();// mang minGPA chưa danh sach cac sinh vien đạt min GPA
         for (int i = 1; i < total; i++) {
-            if (students[i].getGpa() <= min) {
+            if (students[i].getGpa() < min) {
                 min = students[i].getGpa();
-                count = i;
             }
         }
-        return students[count];
+        for (int i = 0; i < total; i++) {
+            if (students[i].getGpa() == min) {
+                minGPA.add(students[i]);
+            }
+        }
+        return minGPA;
     }
 
 }

@@ -34,7 +34,7 @@ public class Student {
     }
 
     public void printInformaton() {
-        System.out.print("Name: " + name);
+        System.out.println("Name: " + name);
         System.out.println(" GPA: " + gpa);
     }
 }
