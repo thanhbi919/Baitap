@@ -29,7 +29,7 @@ public class StudentManagement {
     public int getPass() {//tra ve so sinh vien qua mon
         int count = 0;
         for (Student x : students) {
-            if (x.getGpa() >= 1.5) {
+            if (x.PassFail()==1) {
                 count++;
             }
         }
