@@ -9,7 +9,7 @@ public class SmartPhone {
     private float memory;//Bộ nhớ GB
     private String color;// Màu
     private long price;// Giá bán
-    private int total;//tổng số lương
+    private int total;//tổng số lương điện thoại của hãng
     private int totalSold;//Tổng số bán được
 
     public SmartPhone(String brand, boolean hasBluetooth, boolean has5G, boolean hasWifi, String os, float memory, String color, long price, int totalSold, int total) {

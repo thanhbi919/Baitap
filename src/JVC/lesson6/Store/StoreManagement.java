@@ -28,7 +28,7 @@ public class StoreManagement {
             }
         }
         return total5G;
-    }
+    }//tổng tất cả các điện thoại có 5G
 
     public int totalWifi() {
         int totalWifi = 0;
@@ -42,7 +42,7 @@ public class StoreManagement {
             }
         }
         return totalWifi;
-    }
+    }// tổng tất cả các điện thoại có wifi
 
     public int totalBluetooth() {
         int totalBluetooth = 0;
@@ -56,5 +56,5 @@ public class StoreManagement {
             }
         }
         return totalBluetooth;
-    }
+    }//tổng tất cả các điện thoại có Bluetooth
 }
