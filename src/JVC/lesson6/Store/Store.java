@@ -50,7 +50,7 @@ public class Store {
         this.phones = phones;
     }
 
-    public int totalPhones() {//tổng số điện thoại bán được
+    public int totalPhones() {//tổng số điện thoại bán được của của hàng
         int totalPhones = 0;
         for (SmartPhone x : phones) {
             totalPhones = totalPhones + x.getTotalSold();
@@ -58,7 +58,7 @@ public class Store {
         return totalPhones;
     }
 
-    public double totalRevenue() {// tổng doanh thu
+    public double totalRevenue() {// tổng doanh thu của  của hàng
         double totalRevenue = 0;
         for (SmartPhone x : phones) {
             totalRevenue = totalRevenue + x.getPrice() * x.getTotalSold();

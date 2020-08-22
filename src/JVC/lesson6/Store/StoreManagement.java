@@ -56,5 +56,5 @@ public class StoreManagement {
             }
         }
         return totalBluetooth;
-    }//tổng tất cả các điện thoại có Bluetooth
+    }//tổng tất cả các điện thoại có Bluetooth.
 }
