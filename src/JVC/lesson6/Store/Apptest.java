@@ -60,7 +60,7 @@ public class Apptest {
             System.out.println("nhập thông tin của hàng thứ " + (i + 1) + ":");
             System.out.print("Tên: ");
             String name = scanner.nextLine();
-            scanner.nextLine();
+//            scanner.nextLine();
 
             System.out.print("Address: ");
             String Address = scanner.nextLine();
@@ -69,7 +69,7 @@ public class Apptest {
             System.out.print("Tổng số điện thoại có trong của hàng: ");
             int m = scanner.nextInt();
             scanner.nextLine();
-            System.out.println();
+//            System.out.println();
 
             ArrayList<SmartPhone> y = new ArrayList<>();
             System.out.print("Số hãng điện thoại trong của hàng: ");
@@ -91,7 +91,6 @@ public class Apptest {
             System.out.println("Ten cua hang: " + i.getName());
             System.out.println("Dia chi: " + i.getAddress());
             System.out.println("Tong so dien thoai trong cua hang: " + i.getN());
-
             ArrayList<SmartPhone> j = i.getPhones();
             String name = "";
             for (SmartPhone k : j) {
@@ -124,10 +123,10 @@ public class Apptest {
                 count = i;
             }
         }
-        System.out.println("Cửa hàng doanh dien thoai nhat: ");
+        System.out.println("Cửa hàng có doanh thu cao nhất: ");
         System.out.println("Ten cua hang: " + store[count].getName());
         System.out.println("Dia chi: " + store[count].getAddress());
-        System.out.println("Tong so dien thoai ban duoc " + best);
+        System.out.println("Tong so doanh thu: " + best);
 
     }
     public void badSelling() {
@@ -139,13 +138,13 @@ public class Apptest {
                 count = i;
             }
         }
-        System.out.println("Cửa hàng bán nhiều dien thoai nhat: ");
+        System.out.println("Cửa hàng bán ít dien thoai nhat: ");
         System.out.println("Ten cua hang: " + store[count].getName());
         System.out.println("Dia chi: " + store[count].getAddress());
         System.out.println("Tong so dien thoai ban duoc " + bad);
     }
     public void badRevenue(){
-        double bad = store[0].totalPhones();
+        double bad = store[0].totalRevenue();
         int count = 0;
         for (int i = 1; i < store.length; i++) {
             if (bad > store[i].totalRevenue()) {
@@ -153,10 +152,10 @@ public class Apptest {
                 count = i;
             }
         }
-        System.out.println("Cửa hàng bán nhiều dien thoai nhat: ");
+        System.out.println("Cửa hàng có doanh thu ít nhất: ");
         System.out.println("Ten cua hang: " + store[count].getName());
         System.out.println("Dia chi: " + store[count].getAddress());
-        System.out.println("Tong so dien thoai ban duoc " + bad);
+        System.out.println("Tong so doanh thu: " + bad);
     }
     public int totalHasBluetooth() {
         return x.totalBluetooth();
