@@ -24,7 +24,7 @@ public class EmployeeManagement {
             System.out.print("Age: ");
             int age = scanner.nextInt();
             scanner.nextLine();
-            System.out.print("Loại nhân viên: ");
+            System.out.print("Loại nhân viên(parttime nhap 0, lính nhap 1, sếp nhap 2): ");
             int level = scanner.nextInt();
             scanner.nextLine();
             if (level == 0) {
