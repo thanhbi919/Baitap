@@ -18,8 +18,8 @@ public class ParttimeEmployee extends Employee {
 
     @Override
     public String toString() {
-        return "ParttimeEmployee{" +
+        return super.toString() + " ParttimeEmployee{" +
                 "workHourNumber=" + workHourNumber +
-                '}';
+                "} ";
     }
 }

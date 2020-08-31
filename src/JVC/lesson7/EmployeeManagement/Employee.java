@@ -37,10 +37,18 @@ public class Employee {
 
     @Override
     public String toString() {
+        String _level;
+        if (level == 0) {
+            _level = "Parttime";
+        } else if (level == 1) {
+            _level = "Fulltime-Lính";
+        } else {
+            _level = "Fulltime-Sếp";
+        }
         return "Employee{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
-                ", level=" + level +
+                ", level=" + _level +
                 '}';
     }
 }
