@@ -64,12 +64,12 @@ public class EmployeeManagementnNew {
             if (x instanceof ParttimeEmployee) {
                 ParttimeEmployee parttimeEmployee = (ParttimeEmployee) x;
                 System.out.print(parttimeEmployee.toString());
-                System.out.println(" Lương OT: " + totalOver.get(ii) + " Lương tổng: " + totalOver.get(ii));
+                System.out.println("Lương OT: " + totalOver.get(ii) +"\n"+ "Lương tổng: " + totalOver.get(ii));
                 System.out.println();
             } else {
                 FulltimeEmployee fulltimeEmployee = (FulltimeEmployee) x;
                 System.out.print(fulltimeEmployee.toString());
-                System.out.println(" Lương OT: " + totalOver.get(ii) + " Lương tổng: " + (fulltimeEmployee.getBaseSalary() + totalOver.get(ii)));
+                System.out.println("Lương OT: " + totalOver.get(ii) +"\n"+ "Lương tổng: " + (fulltimeEmployee.getBaseSalary() + totalOver.get(ii)));
                 System.out.println();
             }
             ii++;

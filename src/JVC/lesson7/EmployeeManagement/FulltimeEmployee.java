@@ -35,9 +35,9 @@ public class FulltimeEmployee extends Employee {
 
     @Override
     public String toString() {
-        return super.toString() + " FulltimeEmployee{" +
-                "baseSalary=" + baseSalary +
-                ", overTimeDay=" + overTimeDay +
-                "} ";
+        return super.toString()  +
+                "\nbaseSalary=" + baseSalary +"\n"+
+                "overTimeDay=" + overTimeDay+"\n"
+                ;
     }
 }

@@ -45,10 +45,9 @@ public class Employee {
         } else {
             _level = "Fulltime-Sếp";
         }
-        return "Employee{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", level=" + _level +
-                '}';
+        return "Employee: \n" +
+                "name= " + name +"\n"+
+                "age=" + age +"\n"+
+                "level=" + _level ;
     }
 }
