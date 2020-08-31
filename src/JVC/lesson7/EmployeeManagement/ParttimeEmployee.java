@@ -16,7 +16,8 @@ public class ParttimeEmployee extends Employee {
         this.workHourNumber = workHourNumber;
     }
 
-    public String toString3() {
+    @Override
+    public String toString() {
         return "ParttimeEmployee{" +
                 "workHourNumber=" + workHourNumber +
                 '}';

@@ -35,11 +35,12 @@ public class Employee {
         this.age = age;
     }
 
-
-    public String toString1() {
+    @Override
+    public String toString() {
         return "Employee{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
+                ", level=" + level +
                 '}';
     }
 }

@@ -32,7 +32,8 @@ public class FulltimeEmployee extends Employee{
         this.overTimeDay = overTimeDay;
     }
 
-    public String toString2() {
+    @Override
+    public String toString() {
         return "FulltimeEmployee{" +
                 "baseSalary=" + baseSalary +
                 ", overTimeDay=" + overTimeDay +

@@ -67,14 +67,14 @@ public class EmployeeManagement {
         int i = 0, ii = 0;
         int j = 0;
         for (Employee x : employees) {
-            System.out.print(x.toString1() + " ");
+            System.out.print(x.toString() + " ");
             if (employees.get(ii).getLevel() == 0) {
-                System.out.print(parttimeEmployees.get(i).toString3());
+                System.out.print(parttimeEmployees.get(i).toString());
                 System.out.println(" Lương OT: " + totalOver.get(ii) + " Lương tổng: " + totalOver.get(ii));
                 System.out.println();
                 i++;
             } else {
-                System.out.print(fulltimeEmployees.get(j).toString2());
+                System.out.print(fulltimeEmployees.get(j).toString());
                 System.out.println(" Lương OT: " + totalOver.get(ii) + " Lương tổng: " + (fulltimeEmployees.get(j).getBaseSalary() + totalOver.get(ii)));
                 j++;
                 System.out.println();
