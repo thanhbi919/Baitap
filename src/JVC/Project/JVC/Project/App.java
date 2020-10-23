@@ -20,21 +20,27 @@ public class App {
     enterInformation enterInformation = new enterInformation();
     Question[] questions=new Question[4];
     String[] keys =new String[4];
-    public void menu1() throws Exception {
-        questions=update.readData();
-        enterInformation.enterInfor();
-        String key;
+
+    public void menu1() {
         int point=0;
-        System.out.println("Bài thi kiểm tra năng lực");
-        for(int i=0;i<4;i++){
-            System.out.println(questions[i].getQuestion());
-            System.out.print("Nhập câu trả lời: ");
-            key= scanner.nextLine();
-            keys[i]=key;
-            if(key.equals(questions[i].getKey())){
-                point++;
+        try{questions=update.readData();
+            enterInformation.enterInfor();
+            String key;
+
+            System.out.println("Bài thi kiểm tra năng lực");
+            for(int i=0;i<4;i++){
+                System.out.println(questions[i].getQuestion());
+                System.out.print("Nhập câu trả lời: ");
+                key= scanner.nextLine();
+                keys[i]=key;
+                if(key.equals(questions[i].getKey())){
+                    point++;
+                }
             }
+        }catch (Exception e){
+            System.out.println("lỗi rồi");
         }
+
         enterInformation.users.get(index).setPoint(point);
 
         System.out.println("Bạn đã hoàn thành bài thi!!!!!!");

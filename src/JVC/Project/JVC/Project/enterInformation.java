@@ -9,12 +9,21 @@ public class enterInformation {
     public void enterInfor(){
         Scanner scanner =new Scanner(System.in);
         String name;
-        int Age;
+        int Age=0;
         System.out.printf("Họ và tên:");
         name = scanner.nextLine();
-        System.out.print("Tuổi:");
-        Age= scanner.nextInt();
-        scanner.nextLine();
+        int check =1;
+        while(check !=0){
+            try {
+                System.out.print("Tuổi:");
+                Scanner scanner1 =new Scanner(System.in);
+                Age=scanner1.nextInt();
+                check=0;
+            } catch (Exception e){
+                System.out.println("Bạn phải nhập dữ liệu kiểu số!");
+            }
+        }
+//        scanner.nextLine();
         InforUser user=new InforUser(name,Age);
         users.add(user);
     }

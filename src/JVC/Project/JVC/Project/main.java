@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class main   {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args)  {
         Scanner scanner =new Scanner(System.in);
         App x= new App();
         int j;
@@ -18,12 +18,25 @@ public class main   {
             j = scanner.nextInt();
             switch (j) {
                 case 1:
-                    x.menu1();
+                    try{
+                        x.menu1();
+                    }
+                    catch (Exception e){
+                    }
                     break;
                 case 2:
-                    System.out.println("nhập số thứ tự của bạn: ");
-                    int i;
-                    i = scanner.nextInt();
+                    int i = 0;
+                    int check =1;
+                    while(check !=0){
+                        try {
+                            System.out.println("nhập số thứ tự của bạn: ");
+                            Scanner scanner1 =new Scanner(System.in);
+                            i=scanner1.nextInt();
+                            check=0;
+                        } catch (Exception e){
+                            System.out.println("Bạn phải nhập dữ liệu kiểu số!");
+                        }
+                    }
                     x.menu2(i-1);
                     break;
                 case 3:
