@@ -53,12 +53,13 @@ public class App {
     public void menu3(){
         int max=0;
         ArrayList<InforUser> maxPoint= new ArrayList<>();
-        for(int i=0;i<4;i++){
+        for(int i=0;i<index;i++){
             if(enterInformation.users.get(i).getPoint()>max){
                 max=enterInformation.users.get(i).getPoint();
             }
         }
-        for(int i=0;i<4;i++){
+        System.out.println("Thí sinh đạt điểm cao nhất:");
+        for(int i=0;i<index;i++){
             if(max==enterInformation.users.get(i).getPoint()){
                 System.out.println(enterInformation.users.get(i).toString());
             }

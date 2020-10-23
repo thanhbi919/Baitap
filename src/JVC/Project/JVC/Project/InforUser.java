@@ -40,10 +40,9 @@ public class InforUser {
 
     @Override
     public String toString() {
-        return "InforUser{" +
-                "name='" + name + '\'' +
-                ", Age=" + Age +
-                ", Point=" + Point +
-                '}';
+        return "Họ và tên: " + name  +
+                ", Age: " + Age +
+                ", Điểm: " + Point
+                ;
     }
 }

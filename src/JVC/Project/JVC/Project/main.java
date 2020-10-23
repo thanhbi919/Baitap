@@ -13,7 +13,7 @@ public class main   {
         int j;
         do {
             System.out.println("--------------------MENU----------------------");
-            System.out.println("1. Kiểm tra năng lực\n2. Xem lại bài thi\n3. Thí sinh có kết quả cao nhất" );
+            System.out.println("1. Kiểm tra năng lực\n2. Xem lại bài thi\n3. Thí sinh có kết quả cao nhất\n4. Thoát chương trình" );
             System.out.print("Nhập lựa chọn của bạn: ");
             j = scanner.nextInt();
             switch (j) {
@@ -32,6 +32,6 @@ public class main   {
                 case 4:
                     break;
             }
-        } while (j < 5);
+        } while (j < 4);
     }
 }
