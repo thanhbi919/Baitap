@@ -1,39 +1,31 @@
 package JVC.Project;
 
-import java.sql.SQLOutput;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class App {
-    private int index;
-
-    public int getIndex() {
-        return index;
-    }
-
-    public void setIndex(int index) {
-        this.index = index;
-    }
-
+    public int index;
     Scanner scanner = new Scanner(System.in);
-    updateData update = new updateData();
-    enterInformation enterInformation = new enterInformation();
+    UpdateData update = new UpdateData();
+    EnterInformation enterInformation = new EnterInformation();
     Question[] questions=new Question[4];
     String[] keys =new String[4];
+
 
     public void menu1() {
         int point=0;
         try{questions=update.readData();
             enterInformation.enterInfor();
             String key;
-
             System.out.println("Bài thi kiểm tra năng lực");
             for(int i=0;i<4;i++){
                 System.out.println(questions[i].getQuestion());
                 System.out.print("Nhập câu trả lời: ");
                 key= scanner.nextLine();
                 keys[i]=key;
-                if(key.equals(questions[i].getKey())){
+                if(key.equalsIgnoreCase(questions[i].getKey())){
                     point++;
                 }
             }
@@ -71,5 +63,51 @@ public class App {
             }
         }
     }
+    public void menu4(int index1) throws Exception {
+        FileWriter writer =new FileWriter("D:\\Java_Core\\src\\JVC\\Project\\JVC\\Project\\result.text",true);
+        BufferedWriter buffer= new BufferedWriter(writer);
+        for(int i = 0; i<index1; i++){
+            buffer.write("Họ và tên:"+enterInformation.users.get(i).getName());
+            buffer.newLine();
+            buffer.write("Tuổi:"+enterInformation.users.get(i).getAge());
+            buffer.newLine();
+            buffer.write("Điểm:"+enterInformation.users.get(i).getPoint());
+            buffer.newLine();
+            buffer.write("Chi tiết bài làm");
+            buffer.newLine();
+            for(int j = 0;j<4;j++){
+                buffer.write(questions[j].getQuestion());
+                buffer.newLine();
+                buffer.write("Đáp án của "+enterInformation.users.get(i).getName()+':'+keys[j]);
+                buffer.newLine();
+                buffer.write("Đáp án: " +questions[j].getKey());
+                buffer.newLine();
+            }
+            buffer.newLine();
+            buffer.newLine();
+        }
+        buffer.close();
+}
+    public int errowInput(){
+        int i = 0;
+        int check =1;
+        while(check !=0){
+            try {
+                System.out.print("Nhập lựa chọn của bạn: ");
+                Scanner scanner1 =new Scanner(System.in);
+                i=scanner1.nextInt();
+                if(i>4){
+                    System.out.println("Vui lòng chọn lại!!!");
+                    check=1;
+                }else{
+                    check=0;
+                }
+            } catch (Exception e){
+                System.out.println("Bạn phải nhập dữ liệu kiểu số!");
+            }
+        }
+        return i;
+    }
+
 }
 

@@ -1,6 +1,8 @@
 package JVC.Project;
 
-public class InforUser {
+import java.io.Serializable;
+
+public class InforUser implements Serializable {
     private String name;
     private int Age;
     private int Point;

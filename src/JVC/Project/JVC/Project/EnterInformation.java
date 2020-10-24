@@ -3,7 +3,7 @@ package JVC.Project;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class enterInformation {
+public class EnterInformation {
     public ArrayList<InforUser> users = new ArrayList<>();
 
     public void enterInfor(){
@@ -18,12 +18,16 @@ public class enterInformation {
                 System.out.print("Tuổi:");
                 Scanner scanner1 =new Scanner(System.in);
                 Age=scanner1.nextInt();
-                check=0;
+                if(Age<=0||Age>100) {
+                 check=1;
+                    System.out.println("Vui lòng nhập đúng tuổi của bạn!!");
+                }else{
+                    check=0;
+                }
             } catch (Exception e){
-                System.out.println("Bạn phải nhập dữ liệu kiểu số!");
+                System.out.println("Bạn phải nhập dữ liệu ở dạng sô!!!");
             }
         }
-//        scanner.nextLine();
         InforUser user=new InforUser(name,Age);
         users.add(user);
     }

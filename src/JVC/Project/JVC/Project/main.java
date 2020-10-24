@@ -1,28 +1,20 @@
 package JVC.Project;
-
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class main   {
-    public static void main(String[] args)  {
+    public static void main(String[] args) throws Exception {
         Scanner scanner =new Scanner(System.in);
         App x= new App();
         int j;
+        int index=0;
         do {
             System.out.println("--------------------MENU----------------------");
             System.out.println("1. Kiểm tra năng lực\n2. Xem lại bài thi\n3. Thí sinh có kết quả cao nhất\n4. Thoát chương trình" );
-            System.out.print("Nhập lựa chọn của bạn: ");
-            j = scanner.nextInt();
+            j = x.errowInput();
             switch (j) {
                 case 1:
-                    try{
                         x.menu1();
-                    }
-                    catch (Exception e){
-                    }
+                        index=x.index;
                     break;
                 case 2:
                     int i = 0;
@@ -43,6 +35,7 @@ public class main   {
                     x.menu3();
                     break;
                 case 4:
+                    x.menu4(index);
                     break;
             }
         } while (j < 4);

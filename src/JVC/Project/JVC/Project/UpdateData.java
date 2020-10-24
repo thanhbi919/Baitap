@@ -3,10 +3,9 @@ package JVC.Project;
 import java.io.BufferedReader;
 import java.io.FileReader;
 
-public class updateData {
+public class UpdateData {
     public Question[] qs = new Question[4];
     public Question[] readData() throws Exception{
-
         String path ="D:\\Java_Core\\src\\JVC\\Project\\JVC\\Project\\question.text";
         FileReader reader = new FileReader(path);
         BufferedReader readfile = new BufferedReader(reader);
